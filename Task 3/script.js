@@ -16,9 +16,9 @@ document.getElementById("btn").addEventListener("click", async () => {
   btn.style.display = "none";
   const response = await fetch(ENDPOINT);
   const users = await response.json();
-  let results = "";
+  let result = "";
   for (let i = 0; i < users.length; i++) {
-    results +=
+    result +=
       "<div class='output-user-container'><b>User name:</b>" +
       users[i].login +
       "</br><b>Avatar link:</b> <a href=" +
@@ -27,5 +27,5 @@ document.getElementById("btn").addEventListener("click", async () => {
       users[i].avatar_url +
       "</a></br></br></div>";
   }
-  document.getElementById("output").innerHTML = results;
+  document.getElementById("output").innerHTML = result;
 });
